@@ -1,10 +1,18 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { TeamPage } from "./pages/TeamPage";
+import { HomePage } from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <TeamPage />
+        <Router>
+            <Routes>
+                <Route path="teams/:teamName" element={<TeamPage />} />
+                <Route exact path="/" element={<HomePage />} />
+            </Routes>
+        </Router>
+
     </div>
   );
 }
