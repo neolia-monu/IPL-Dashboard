@@ -1,8 +1,8 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { TeamPage } from "./pages/TeamPage";
+import { TeamPage } from "./pages/TeamPage/TeamPage";
 import { HomePage } from "./pages/HomePage";
-import {MatchPage} from "./pages/MatchPage";
+import {MatchPage} from "./pages/MatchPage/MatchPage";
 
 function App() {
   return (
