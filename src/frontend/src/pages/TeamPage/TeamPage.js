@@ -72,7 +72,7 @@ export const TeamPage = () => {
             </div>
 
             {/* 3rd Row */}
-            {team.matches.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match} />)}
+            {team.matches.slice(1).map(match => <MatchSmallCard key={match.id} teamName={team.teamName} match={match} />)}
             <div className="more-link">
                 <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More ></Link>
             </div>
