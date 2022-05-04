@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { TeamPage } from "./pages/TeamPage/TeamPage";
-import { HomePage } from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage/HomePage";
 import {MatchPage} from "./pages/MatchPage/MatchPage";
 
 function App() {
