@@ -11,7 +11,7 @@ export const HomePage = () => {
         () => {
             const fetchAllTeams = async () => {
 
-                const res = await fetch("http://localhost:8080/team");
+                const res = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/team`);
                 const data = await res.json();
 
                 // console.log(data);
@@ -30,7 +30,7 @@ export const HomePage = () => {
                 <h1 className="app-name">IPL Dashboard</h1>
             </div>
             <div className="team-grid">
-                { teams.map(team => <TeamTitle key={team.id}     teamName={team.teamName} />)}
+                { teams.map(team => <TeamTitle key={team.id} teamName={team.teamName} />)}
             </div>
         </div>
     );
